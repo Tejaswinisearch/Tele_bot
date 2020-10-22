@@ -33,7 +33,7 @@ def start(update,context):
 /Turnoff or 'Turn off':To turn off the light 
 /Turnon or 'Turn on'  :To turn on the light 
 '''
-context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
+use_context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
 ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME')
 ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
 TOKEN = os.getenv('TOKEN')
