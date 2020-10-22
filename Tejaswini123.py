@@ -1,5 +1,3 @@
-!pip install adafruit-io
-
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from Adafruit_IO import Client,Data,Feed
 import os
