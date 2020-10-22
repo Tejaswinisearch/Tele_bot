@@ -38,12 +38,12 @@ ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME')
 ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
 TOKEN = os.getenv('TOKEN')
 aio = Client('ADAFRUIT_IO_USERNAME','ADAFRUIT_IO_KEY')
-u = Updater('TOKEN', use_context=True)
-dispatcher = u.dispatcher
+updater=Updater('TOKEN', use_context=True)
+dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler('turnoff',turnoff)) 
 dispatcher.add_handler(CommandHandler('turnon',turnon))
 dispatcher.add_handler(CommandHandler('start',start))
 dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command),input_message))
-u.start_polling()
-u.idle()
+updater.start_polling()
+updater.idle()
    
