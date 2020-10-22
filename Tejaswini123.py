@@ -1,4 +1,4 @@
-!pip3 install python-telegram-bot
+!pip install python-telegram-bot
 
 !pip install adafruit-io
 
